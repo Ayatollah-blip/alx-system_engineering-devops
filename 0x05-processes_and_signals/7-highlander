@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#Write infinity loop of with sleep 2
+#+ a sleep 2 in between each iteration
+
+function sigterm_handler()
+{
+	echo "I am invincible!!!"
+	exit 0
+}
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap 'sigterm_handler' TERM
+done
+
+
