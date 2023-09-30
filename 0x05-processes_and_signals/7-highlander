@@ -2,11 +2,15 @@
 #Write infinity loop of with sleep 2
 #+ a sleep 2 in between each iteration
 
+function sigterm_handler()
+{
+	echo "I am invincible!!!"
+}
 while true
 do
 	echo "To infinity and beyond"
 	sleep 2
-	trap 'echo "I am invincible!!!"' SIGTERM
+	trap 'sigterm_handler' SIGTERM
 done
 
 
