@@ -12,7 +12,7 @@ while true
 do
 	echo "To infinity and beyond"
 	sleep 2
-	trap 'sigterm_handler' TERM
+	trap 'sigterm_handler' SIGTERM
 done
 
 
