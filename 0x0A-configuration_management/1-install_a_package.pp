@@ -1,3 +1,4 @@
+#!/usr/bin/pup
 #this to create a file /tmp
 package {'flask':
 ensure   => '2.1.0',
