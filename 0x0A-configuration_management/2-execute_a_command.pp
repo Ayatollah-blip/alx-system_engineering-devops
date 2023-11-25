@@ -1,11 +1,9 @@
-#!/usr/bin/pup
+# Executes a bash command
 
-# Install an especific version of flask (2.1.0
+exec { 'kill':
 
-exec {'kill':
+  command => 'pkill -f killmenow',
 
-  command   => 'pkill -f killmenow',
-  path      => ['/usr/bin', '/usr/sbin']
-
+  path    => ['/usr/bin', '/usr/sbin']
 
 }
